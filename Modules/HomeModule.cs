@@ -12,13 +12,13 @@ namespace coreNancy
       {
         //Index
         Get("/", _ => {
-          return View["index.sshtml"];
+          return View["index.html"];
         });
         //About
         Get("/about", _ => {
           var model = new Task();
           model.Description = "Walk the dog.";
-          return View["about.sshtml", model];
+          return View["about.html", model];
         });
         //Greet page
         // Get("/greet/{name}", x => {
