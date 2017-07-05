@@ -1,0 +1,8 @@
+/Users/epicodus/Desktop/coreNancy/bin/Debug/netcoreapp1.1/coreNancy.deps.json
+/Users/epicodus/Desktop/coreNancy/bin/Debug/netcoreapp1.1/coreNancy.runtimeconfig.json
+/Users/epicodus/Desktop/coreNancy/bin/Debug/netcoreapp1.1/coreNancy.runtimeconfig.dev.json
+/Users/epicodus/Desktop/coreNancy/bin/Debug/netcoreapp1.1/coreNancy.dll
+/Users/epicodus/Desktop/coreNancy/bin/Debug/netcoreapp1.1/coreNancy.pdb
+/Users/epicodus/Desktop/coreNancy/obj/Debug/netcoreapp1.1/coreNancy.AssemblyInfo.cs
+/Users/epicodus/Desktop/coreNancy/obj/Debug/netcoreapp1.1/coreNancy.dll
+/Users/epicodus/Desktop/coreNancy/obj/Debug/netcoreapp1.1/coreNancy.pdb
