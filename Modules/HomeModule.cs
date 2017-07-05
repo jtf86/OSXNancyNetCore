@@ -15,7 +15,8 @@ namespace coreNancy
         });
 
         Get("/about", _ => {
-          return View["about.html"];
+          var model = "I AM THE MODEL";
+          return View["about.html", model];
         });
         //Greet page
         // Get("/greet/{name}", x => {
