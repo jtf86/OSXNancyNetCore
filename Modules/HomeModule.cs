@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System;
 using Nancy;
 using Nancy.ViewEngines.Razor;
+using coreNancy.Objects;
 
 namespace coreNancy
 {
@@ -13,9 +14,10 @@ namespace coreNancy
         Get("/", _ => {
           return View["index.html"];
         });
-
+        //About
         Get("/about", _ => {
-          var model = "I AM THE MODEL";
+          var model = new Task();
+          model.Description = "Walk the dog.";
           return View["about.html", model];
         });
         //Greet page
