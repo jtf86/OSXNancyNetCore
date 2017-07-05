@@ -29,6 +29,7 @@ namespace coreNancy
     {
         public string GetRootPath()
         {
+            Console.WriteLine(Directory.GetCurrentDirectory());
             return Directory.GetCurrentDirectory();
         }
     }

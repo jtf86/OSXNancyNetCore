@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>The About Page</title>
-  </head>
-  <body>
+@Master['master']
+
+@Section['Content']
     <h3>ABOUT US</h3>
     <h4>See below for the model</h4>
     <p>
       @Model.Description
     </p>
+    <img src="~/content/img/images.jpg" alt="a dog" />
     <p>
       <a href="/">HOME</a>
     </p>
-  </body>
-</html>
+@EndSection
