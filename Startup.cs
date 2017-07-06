@@ -37,6 +37,7 @@ namespace coreMvc
             {
                 app.UseDeveloperExceptionPage();
             }
+            // app.UseMvc();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
