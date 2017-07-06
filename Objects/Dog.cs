@@ -10,11 +10,12 @@ namespace coreNancy.Objects
   {
     public string _name;
     public int _id;
-    public static List<Dog> instances = new List<Dog> {};
+    // public static List<Dog> instances = new List<Dog> {};
 
     public Dog(string newName, int id=0)
     {
         this._name = newName;
+        this._id = id;
         // instances.Add(this);
     }
 
@@ -22,6 +23,11 @@ namespace coreNancy.Objects
     {
       return _name;
     }
+
+    // public static List<Dog> GetAllOLD()
+    // {
+    //   return instances;
+    // }
 
     public static List<Dog> GetAll()
     {
@@ -43,7 +49,7 @@ namespace coreNancy.Objects
 
       if (rdr != null)
       {
-        rdr.Close();
+        // rdr.Close();
       }
       if (conn != null)
       {
@@ -58,7 +64,7 @@ namespace coreNancy.Objects
       SqlConnection conn = DB.Connection();
       conn.Open();
 
-      SqlCommand cmd = ("INSERT INTO dogs (name) OUTPUT INSERTED.id VALUES (@DogName);", conn);
+      SqlCommand cmd = new SqlCommand("INSERT INTO dogs (name) OUTPUT INSERTED.id VALUES (@DogName);", conn);
       SqlParameter name = new SqlParameter();
       name.ParameterName = "@DogName";
       name.Value = this._name;
@@ -72,7 +78,7 @@ namespace coreNancy.Objects
       }
       if (rdr != null)
       {
-        rdr.Close();
+        // rdr.Close();
       }
       if (conn != null)
       {

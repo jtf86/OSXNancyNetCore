@@ -27,6 +27,7 @@ namespace coreNancy
         Post("/dogs", _ => {
           Dictionary<string, object> model = new Dictionary<string, object> ();
           Dog newDog = new Dog(Request.Form["name"]);
+          newDog.Save();
           List<Dog> allDogs = Dog.GetAll();
           model.Add("Recentdog", newDog);
           model.Add("allDogs", allDogs);

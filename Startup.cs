@@ -2,6 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Razor;
 // using Microsoft.AspNetCore.Mvc;
 using Nancy;
@@ -30,7 +31,7 @@ namespace coreNancy
 
     public static class DBConfiguration
     {
-      public static string ConnectionString = "Data Source=localhost;Initial Catalog=doglist;u=sa;Password=Epicodus";
+      public static string ConnectionString = "Server=localhost;Database=doglist;User Id=sa;Password=Epic0dus";
     }
 
     // public class RazorConfig : IRazorConfiguration
