@@ -1,0 +1,28 @@
+@Master['master']
+
+@Section['Content']
+<h3>Current Dog</h3>
+<h4>See below for the model</h4>
+
+<h3>List of Good Dogs:</h3>
+
+<h4>You've just added:</h4>
+  <p>@Model.Recentdog._name</p>
+
+
+<ul>
+@Each.Model.allDogs
+  <li>@Current._name </li>
+@EndEach
+</ul>
+<img src="Content/img/images.jpg" alt="a dog" />
+<p>
+  <a href="/">HOME</a>
+</p>
+
+<form class="dogForm" action="dogs" method="post">
+  <label for="name">Dog Name</label>
+  <input type="text" name="name" value="">
+  <button type="submit" name="button">Add Dog</button>
+</form>
+@EndSection

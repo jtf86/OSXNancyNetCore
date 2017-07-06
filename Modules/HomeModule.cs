@@ -14,10 +14,23 @@ namespace coreNancy
         Get("/", _ => {
           return View["index.html"];
         });
+
         //About
-        Get("/about", _ => {
-          var model = new Task("Walk the dog.");
-          return View["about.html", model];
+        Get("/dogs", _ => {
+          Dictionary<string, object> model = new Dictionary<string, object> ();
+          List<Dog> allDogs = Dog.GetAll();
+          model.Add("allDogs", allDogs);
+          return View["dogs.html", model];
+        });
+
+        //New Dog
+        Post("/dogs", _ => {
+          Dictionary<string, object> model = new Dictionary<string, object> ();
+          Dog newDog = new Dog(Request.Form["name"]);
+          List<Dog> allDogs = Dog.GetAll();
+          model.Add("Recentdog", newDog);
+          model.Add("allDogs", allDogs);
+          return View["add_dog.html", model];
         });
 
       }
