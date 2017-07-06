@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Nancy;
 using Nancy.ViewEngines.Razor;
+using Microsoft.AspNetCore.Razor;
 using coreNancy.Objects;
 
 namespace coreNancy
