@@ -1,25 +1,33 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
-using Nancy;
-using Nancy.ViewEngines.Razor;
-using coreNancy.Objects;
+using Microsoft.AspNetCore.Mvc;
+using coreMvc.Objects;
 
-namespace coreNancy
+namespace coreMvc
 {
-  public class HomeModule : NancyModule
+  public class HomeController : Controller
   {
-      public HomeModule()
-      {
         //Index
-        Get("/", _ => {
-          return View["index.html"];
-        });
-        //About
-        Get("/about", _ => {
-          var model = new Task("Walk the dog.");
-          return View["about.html", model];
-        });
+        // Get("/", _ => {
+        //   return View["index.html"];
+        // });
+        public IActionResult Index()
+        {
+          return View();
+        }
 
-      }
+        //About
+        // Get("/about", _ => {
+        //   var model = new Task("Walk the dog.");
+        //   return View["about.html", model];
+        // });
+        public IActionResult About()
+        {
+          var model = new Task("Walk the dog.");
+          return View(model);
+        }
+
+
   }
 }

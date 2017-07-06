@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 
-namespace coreNancy.Objects
+namespace coreMvc.Objects
 {
   public class Task
   {
-    public string _description;
+    private string _description;
     public static List<Task> instances = new List<Task> {};
 
     public Task(string newDescription)
