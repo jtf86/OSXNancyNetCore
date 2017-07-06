@@ -6,7 +6,7 @@ using coreMvc.Objects;
 
 namespace coreMvc
 {
-  public class HomeController : Controller
+  public class AppController : Controller
   {
         //Index
         // Get("/", _ => {
