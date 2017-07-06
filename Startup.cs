@@ -28,6 +28,11 @@ namespace coreNancy
         }
     }
 
+    public static class DBConfiguration
+    {
+      public static string ConnectionString = "Data Source=localhost;Initial Catalog=doglist;u=sa;Password=Epicodus";
+    }
+
     // public class RazorConfig : IRazorConfiguration
     // {
     //     public IEnumerable<string> GetAssemblyNames()

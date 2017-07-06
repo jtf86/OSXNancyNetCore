@@ -22,5 +22,10 @@ namespace coreNancy.Objects
     {
       return instances;
     }
+
+    public void Save()
+    {
+      
+    }
   }
 }
