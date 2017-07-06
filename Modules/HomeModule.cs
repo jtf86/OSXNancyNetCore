@@ -16,8 +16,7 @@ namespace coreNancy
         });
         //About
         Get("/about", _ => {
-          var model = new Task();
-          model.Description = "Walk the dog.";
+          var model = new Task("Walk the dog.");
           return View["about.html", model];
         });
         //Greet page
