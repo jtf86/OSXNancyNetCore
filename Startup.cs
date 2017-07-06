@@ -1,9 +1,12 @@
 ﻿using System;
 using System.IO;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Razor;
+// using Microsoft.AspNetCore.Mvc;
 using Nancy;
 using Nancy.Owin;
+// using Nancy.ViewEngines.Razor;
 
 namespace coreNancy
 {
@@ -24,5 +27,23 @@ namespace coreNancy
             return Directory.GetCurrentDirectory();
         }
     }
+
+    // public class RazorConfig : IRazorConfiguration
+    // {
+    //     public IEnumerable<string> GetAssemblyNames()
+    //     {
+    //         return null;
+    //     }
+    //
+    //     public IEnumerable<string> GetDefaultNamespaces()
+    //     {
+    //         return null;
+    //     }
+    //
+    //     public bool AutoIncludeModelNamespace
+    //     {
+    //         get { return false; }
+    //     }
+    // }
 
 }

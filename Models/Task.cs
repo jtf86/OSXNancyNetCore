@@ -4,7 +4,7 @@ namespace coreNancy.Objects
 {
   public class Task
   {
-    private string _description;
+    public string _description;
     public static List<Task> instances = new List<Task> {};
 
     public Task(string newDescription)
