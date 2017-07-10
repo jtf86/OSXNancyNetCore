@@ -35,6 +35,11 @@ namespace coreNancy
           return View["add_dog.html", model];
         });
 
+        Get("/dogs/{id}", args => {
+          var model = Dog.Find(args.id);
+          return View["dog.html", model];
+        });
+
       }
   }
 }

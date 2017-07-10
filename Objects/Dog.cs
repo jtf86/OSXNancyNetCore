@@ -19,11 +19,6 @@ namespace coreNancy.Objects
         // instances.Add(this);
     }
 
-    public string GetName()
-    {
-      return _name;
-    }
-
     // public static List<Dog> GetAllOLD()
     // {
     //   return instances;
@@ -46,16 +41,10 @@ namespace coreNancy.Objects
         Dog newDog = new Dog(dogName, dogId);
         allDogs.Add(newDog);
       }
-
-      if (rdr != null)
-      {
-        // rdr.Close();
-      }
       if (conn != null)
       {
         conn.Close();
       }
-
       return allDogs;
     }
 
@@ -76,15 +65,40 @@ namespace coreNancy.Objects
       {
         this._id = rdr.GetInt32(0);
       }
-      if (rdr != null)
-      {
-        // rdr.Close();
-      }
       if (conn != null)
       {
         conn.Close();
       }
     }
+
+    public static Dog Find(int dogId)
+    {
+      SqlConnection conn = DB.Connection();
+      conn.Open();
+
+      SqlCommand cmd = new SqlCommand("SELECT * FROM dogs WHERE id = @DogId;", conn);
+      SqlParameter searchId = new SqlParameter();
+      searchId.ParameterName = "@DogId";
+      searchId.Value = dogId;
+      SqlDataReader rdr = cmd.ExecuteReader();
+
+      int foundDogId = 0;
+      string foundDogName = null;
+
+      while(rdr.Read())
+      {
+        foundDogId = rdr.GetInt32(0);
+        foundDogName = rdr.GetString(1);
+      }
+
+      Dog foundDog = new Dog(foundDogName, foundDogId);
+      if (conn != null)
+      {
+        conn.Close();
+      }
+      return foundDog;
+    }
+
 
   }
 }

@@ -12,7 +12,7 @@
 
 <ul>
 @Each.Model.allDogs
-  <li>@Current._name </li>
+<li>@Current._name | <a href="/dogs/@Current._id">Details</a></li>
 @EndEach
 </ul>
 <img src="Content/img/images.jpg" alt="a dog" />
